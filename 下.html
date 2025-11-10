@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>李敖资源</title>
+    <style>
+        /* 下半部分按钮 Grid 布局，不居中显示，最大宽度限制 */
+        .leeao-buttons {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 200px)); /* 最大宽度200px */
+            gap: 12px;
+        }
+        .leeao-buttons .leeao-btn {
+            padding: 10px 14px;
+            border-radius: 10px;
+            border: 1px solid rgba(15,23,42,0.06);
+            background: linear-gradient(180deg, #fff, #f6f8ff);
+            cursor: pointer;
+            font-weight: 600;
+            font-family: inherit;
+            text-align: center;
+            transition: all 0.2s ease;
+        }
+        .leeao-buttons .leeao-btn:hover {
+            opacity: 0.85;
+            transform: translateY(-1px);
+        }
+
+        /* 手机屏幕固定每行两个按钮 */
+        @media (max-width: 480px) {
+            .leeao-buttons {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="leeao-buttons">
+        <button class="leeao-btn" id="button1">李敖2000年官网</button>
+        <button class="leeao-btn" id="button2">李敖研究论坛</button>
+        <button class="leeao-btn" id="button3">前往用戶网盘</button>
+        <button class="leeao-btn" id="button4">在线阅读大全集</button>
+    </div>
+
+    <script>
+        // 按钮点击跳转
+        document.getElementById("button1").onclick = () => window.open("https://web.leeao.net", "_blank");
+        document.getElementById("button2").onclick = () => window.open("http://angelshideaway.net/leo/", "_blank");
+        document.getElementById("button3").onclick = () => window.open("http://tw.leeao.net:5212", "_blank");
+        document.getElementById("button4").onclick = () => window.open("http://books.leeao.net", "_blank");
+    </script>
+</body>
+</html>
